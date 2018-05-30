@@ -2,7 +2,7 @@ package com.java.myh.controller;
 
 
 import com.java.myh.model.User;
-import com.java.myh.repository.UserRepository;
+import com.java.myh.service.UserService;
 import com.java.myh.util.ResponseJson;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,11 +18,11 @@ import javax.annotation.Resource;
 public class UserController {
 
     @Resource
-    private UserRepository userRepository;
+    private UserService userService;
 
     @RequestMapping("/hello")
     public ResponseJson hello() {
-        User user = userRepository.findByUsername("xinan");
+        User user = userService.findByUsername("xinan");
         return new ResponseJson("ok", Boolean.TRUE, user);
     }
 }

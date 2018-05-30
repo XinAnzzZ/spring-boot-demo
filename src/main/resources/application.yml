@@ -4,7 +4,7 @@ server:
 spring:
 # 环境
   profiles:
-    active: prd
+    active: dev
 
 #################### Druid连接池配置 start ########################
   datasource:

@@ -1,0 +1,17 @@
+server:
+  port: 80
+
+spring:
+#数据源
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;failOverReadOnly=false&amp;autoReconnect=true&amp;roundRobinLoadBalance=true
+    username: root
+    password: root
+
+#热部署，注意Idea需要开启自动编译（设置：File-Settings-Compiler-Build Project automatically），或者每次更改之后按ctrl+f9进行build
+  devtools:
+    remote:
+      restart:
+        enabled: false
+    restart:
+      exclude: WEB-INF/**

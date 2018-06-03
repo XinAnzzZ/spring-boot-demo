@@ -1,4 +1,4 @@
-package com.java.myh.configuration;
+package com.java.myh.configuration.druid;
 
 import com.alibaba.druid.support.http.StatViewServlet;
 

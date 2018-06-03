@@ -40,6 +40,8 @@ spring:
     # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
+#    filters: log4j
+
 #################### Druid连接池配置 end ########################
 
 # JPA配置 显示并格式化sql
@@ -51,4 +53,5 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.MySQLDialect
+    open-in-view: true
 

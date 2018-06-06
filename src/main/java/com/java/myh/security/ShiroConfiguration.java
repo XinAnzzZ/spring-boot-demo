@@ -31,9 +31,9 @@ public class ShiroConfiguration {
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         Map<String, String> map = new HashMap<>(16);
         //注销
-//        map.put("/logout", "logout");
-//        //对所有用户认证
-//        map.put("/**", "autho");
+        map.put("/logout", "logout");
+        //对所有用户认证
+        map.put("/*", "authc");
         shiroFilterFactoryBean.setLoginUrl("/login");
         shiroFilterFactoryBean.setSuccessUrl("/index");
         //认证不通过页面

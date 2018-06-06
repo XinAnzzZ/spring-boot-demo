@@ -1,7 +1,7 @@
 package com.java.myh.controller;
 
 import com.java.myh.model.User;
-import com.java.myh.security.ShiroUtils;
+import com.java.myh.util.ShiroUtils;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;

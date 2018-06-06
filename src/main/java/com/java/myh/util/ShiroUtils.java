@@ -1,4 +1,4 @@
-package com.java.myh.security;
+package com.java.myh.util;
 
 import com.java.myh.model.User;
 import org.apache.shiro.SecurityUtils;

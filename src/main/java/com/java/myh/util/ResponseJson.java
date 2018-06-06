@@ -34,7 +34,7 @@ public class ResponseJson {
 
     public static final Integer NORMAL = 200;
     public static final Integer NOT_FOUND = 404;
-    public static final Integer UNKNOW_REASON = 500;
+    public static final Integer UNKNOWN_REASON = 500;
 
     public ResponseJson() {
     }
@@ -73,8 +73,8 @@ public class ResponseJson {
 
     public static ResponseJson fail() {
         ResponseJson responseJson = new ResponseJson();
-        responseJson.setReturnCode(UNKNOW_REASON);
-        responseJson.setReturnMsg("unknow reason！未知错误，请联系管理员！");
+        responseJson.setReturnCode(UNKNOWN_REASON);
+        responseJson.setReturnMsg("unknown reason！未知错误，请联系管理员！");
         return responseJson;
     }
 

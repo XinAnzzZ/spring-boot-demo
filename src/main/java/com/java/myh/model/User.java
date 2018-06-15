@@ -6,6 +6,8 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author 心安
@@ -38,11 +40,12 @@ public class User implements Serializable {
      * //         joinColumn：指定第三张表中关联本表的外键名
      * //         inverseJoinColumns：指定第三张表中关联角色表中外键名
      */
-//    @ManyToMany
-//    @JoinTable(name = "user_role",
-//            joinColumns = {@JoinColumn(name = "user_id")},
-//            inverseJoinColumns = {@JoinColumn(name = "role_id")})
-//    private Set<UserRole> userRoles = new HashSet<>(0);
+    @ManyToMany
+    @JoinTable(name = "user_role",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "role_id")})
+    private Set<UserRole> userRoles = new HashSet<>(0);
+
     public Integer getId() {
         return id;
     }
@@ -67,13 +70,13 @@ public class User implements Serializable {
         this.password = password;
     }
 
-//    public Set<UserRole> getUserRoles() {
-//        return userRoles;
-//    }
-//
-//    public void setUserRoles(Set<UserRole> userRoles) {
-//        this.userRoles = userRoles;
-//    }
+    public Set<UserRole> getUserRoles() {
+        return userRoles;
+    }
+
+    public void setUserRoles(Set<UserRole> userRoles) {
+        this.userRoles = userRoles;
+    }
 
     @Override
     public String toString() {

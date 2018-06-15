@@ -43,6 +43,7 @@ public class UserController extends BaseController {
 
     @RequestMapping("/get/weather/{city}")
     public String getWeather(@PathVariable("city") String city) {
+
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url("http://api.k780.com:88/?app=weather.future&&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json&weaid=" + city)
@@ -55,7 +56,7 @@ public class UserController extends BaseController {
         } catch (Exception e) {
             return "unknown reason！未知错误，请联系管理员！";
         }
-        System.out.println(responseBody);
         return responseBody;
+
     }
 }
